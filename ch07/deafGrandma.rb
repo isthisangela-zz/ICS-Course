@@ -1,7 +1,11 @@
-while gets.chomp != "BYE"
+while true
   n = gets.chomp
   if n != n.upcase
     puts "HUH?! SPEAK UP, SONNY!"
   else
-    puts "NO, NOT SINCE " + (1930  + rand(21)).to_s + "!"
+    if n != "BYE"
+      puts "NO, NOT SINCE " + (1930  + rand(21)).to_s + "!"
+    else
+      puts "SEE YOU SOON!"
+      break
 end
