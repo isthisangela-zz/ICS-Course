@@ -1,3 +1,3 @@
-puts "WHAT DO YOU WANT?!"
+puts 'WHAT DO YOU WANT?!'
 request = gets.chomp
-puts "WHADDAYA MEAN /"" + request + "/"?!? YOU'RE FIRED!!"
+puts 'WHADDAYA MEAN "' + request.upcase + '"?!? YOU\'RE FIRED!!'
