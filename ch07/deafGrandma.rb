@@ -8,4 +8,6 @@ while true
     else
       puts "SEE YOU SOON!"
       break
+    end
+  end
 end
