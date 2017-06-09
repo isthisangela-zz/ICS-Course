@@ -48,3 +48,7 @@ def roman n
       r = r + i*'I'
     end
   end  
+    
+  r
+    
+end
