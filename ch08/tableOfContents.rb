@@ -8,8 +8,8 @@ rwidth = 10
 
 puts title.center(lwidth + rwidth)
 
-names.each do |nm|
-  pages.each do |pg|
-    puts nm.ljust(lwidth) + pg.rjust(rwidth)
-  end
+num = 0
+while num < names.length
+       puts names[num].ljust(lwidth) + pages[num].to_s.rjust(rwidth)
+       num = num + 1
 end
