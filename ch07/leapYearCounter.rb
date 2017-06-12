@@ -14,6 +14,6 @@ while year <= endyr
     else
       puts year.to_s
     end
-  year = year + 1
   end
+  year = year + 1
 end
