@@ -15,6 +15,7 @@ def roman n
       r = r + 'CM'
     else
       r = r + 'D' + c*'C'
+    end
   else
     if c == 4
       r = r + 'CD'
@@ -28,6 +29,7 @@ def roman n
       r = r + 'XC'
     else
       r = r + 'L' + x*'X'
+    end
   else
     if x == 4
       r = r + 'XL'
@@ -41,6 +43,7 @@ def roman n
       r = r + 'IX'
     else
       r = r + 'V' + i*'I'
+    end
   else
     if i == 4
       r = r + 'IV'
