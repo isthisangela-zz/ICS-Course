@@ -4,11 +4,11 @@ end
 
 def recursive_sort unsorted_array, sorted_array
   if unsorted_array.length == 0
-    sorted_array
+    return sorted_array
   else
     small = unsorted_array.min
     unsorted_array.delete_at(unsorted_array.index(small))
     sorted_array.push(small)
-    recursive_sort unsorted_array, sorted_array
+    return recursive_sort unsorted_array, sorted_array
   end
 end
