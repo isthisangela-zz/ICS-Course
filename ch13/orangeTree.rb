@@ -58,3 +58,5 @@ class OrangeTree
     @orangeCount = 0
     @dead = true
     @pick = false
+  end
+end
