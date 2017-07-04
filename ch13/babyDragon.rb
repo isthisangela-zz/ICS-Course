@@ -93,7 +93,7 @@ bye = false
 puts "Name your dragon:"
 name = gets.chomp
 pet = Dragon.new name
-while !exit
+while !bye
   puts "What would you like to do with " + name + "?"
   puts "Enter 'feed', 'walk', 'rock', 'toss', 'put to bed', or 'quit'."
   action = gets.chomp.downcase
