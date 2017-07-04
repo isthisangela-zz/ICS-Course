@@ -1,13 +1,25 @@
-puts "What year were you born in? (yyyy)"
-year = gets.chomp.to_i
-puts "What month were you born in? (mm)"
-month = gets.chomp.to_i
-puts "What day of the month were you born on? (dd)"
-day = gets.chomp.to_i
-
-age_secs = Time.new - Time.local(year, month, day)
-age_yrs = age_secs/31536000 # seconds in a year
-while age_yrs > 0
-  puts "SPANK!"
-  age_yrs = age_yrs - 1
+def getbday txtfile
+  birth_dates = {}
+  txtfile.each_line.chomp do |line|
+    comma = line.index(",")
+    name = line[0..(comma-1)]
+    date = line[-12..-7]
+    birth_dates[name] = date
+  end
+  birth_dates
 end
+
+months = {}
+months[
+
+puts "Input filename ending in .txt:"
+input = gets.chomp
+if input[-4..-1] != ".txt"
+  puts "Not a .txt file!"
+  exit
+end
+text = File.read input
+puts "Enter a name:"
+name = gets.chomp
+date = (getbday text)[name]
+puts name + "'s birthday will be on " + date + "."
