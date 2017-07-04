@@ -89,7 +89,7 @@ class Dragon
   end
 end
 
-exit = false
+bye = false
 puts "Name your dragon:"
 name = gets.chomp
 pet = Dragon.new name
@@ -108,7 +108,7 @@ while !exit
   elsif action == "put to bed"
     pet.put_to_bed
   elsif action == "quit"
-    exit == true
+    bye == true
   else
     puts "Unrecognized action"
   end  
