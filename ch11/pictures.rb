@@ -9,19 +9,25 @@ print "Downloading #{pic_names.length} files: "
 pic_number = 1
 pic_names.each do |name|
   print '.' # This is our "progress bar".
-  new_name = if pic_number < 10
-    "#{batch_name}0#{pic_number}.jpg"
+  if pic_number < 10
+    new_name = "#{batch_name}0#{pic_number}.jpg"
     tail = 0
-    while new_name.exist?
-      new_name =  "#{batch_name}0#{pic_number}" + "_" + tail.to_s + ".jpg"
-      tail = tail + 1
+    if new_name.exist?
+      puts "Overwrite existing file? (Y/N)"
+      if gets.chomp.upcase == "N"
+        puts "Enter new name for file:"
+        new_name = gets.chomp
+      end
     end
   else
-    "#{batch_name}#{pic_number}.jpg"
+    new_name = "#{batch_name}#{pic_number}.jpg"
     tail = 0
-    while new_name.exist?
-      new_name =  "#{batch_name}#{pic_number}" + "_" + tail.to_s + ".jpg"
-      tail = tail + 1
+    if new_name.exist?
+      puts "Overwrite existing file? (Y/N)"
+      if gets.chomp.upcase == "N"
+        puts "Enter new name for file:"
+        new_name = gets.chomp
+      end
     end
   end
   File.rename name, new_name
@@ -29,4 +35,4 @@ pic_names.each do |name|
 end
 
 puts
-puts 'Done, cutie!'
+puts 'Done'
