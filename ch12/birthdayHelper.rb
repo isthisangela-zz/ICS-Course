@@ -1,6 +1,7 @@
 def getbday txtfile
   birth_dates = {}
-  txtfile.each_line.chomp do |line|
+  txtfile.each_line do |line|
+    line = line.chomp
     comma = line.index(",")
     name = line[0..(comma-1)]
     date = line[-12..-7]
