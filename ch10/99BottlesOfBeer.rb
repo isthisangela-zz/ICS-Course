@@ -1,22 +1,4 @@
-bottles = 99
 
-while num > 2
-  puts english_number bottles + " bottles of beer on the wall, " + english_number bottles + "bottles of beer"
-  bottles = bottles - 1
-  puts "Take one down and pass it around, " + english_number bottles + " bottles of beer on the wall"
-  puts
-end
-
-puts "Two bottles of beer on the wall, two bottles of beer"
-puts "Take one down and pass it around, one bottle of beer on the wall"
-puts
-puts "One bottle of beer on the wall, one bottle of beer"
-puts "Take it down and pass it around, no more bottles of beer on the wall"
-puts
-puts "No more bottles of beer on the wall, no more bottles of beer"
-puts "Go to the store and buy some more, ninety-nine bottles of beer on the wall!"
-
-# english_number function straight pasted from englishNumber.rb
 def english_number number
   if number < 0 # No negative numbers. 
     return 'Please enter a number that isn\'t negative.'
@@ -105,3 +87,21 @@ def english_number number
   
   num_string
 end
+
+bottles = 99
+
+while num > 2
+  puts english_number bottles + " bottles of beer on the wall, " + english_number bottles + "bottles of beer"
+  bottles = bottles - 1
+  puts "Take one down and pass it around, " + english_number bottles + " bottles of beer on the wall"
+  puts
+end
+
+puts "Two bottles of beer on the wall, two bottles of beer"
+puts "Take one down and pass it around, one bottle of beer on the wall"
+puts
+puts "One bottle of beer on the wall, one bottle of beer"
+puts "Take it down and pass it around, no more bottles of beer on the wall"
+puts
+puts "No more bottles of beer on the wall, no more bottles of beer"
+puts "Go to the store and buy some more, ninety-nine bottles of beer on the wall!"
