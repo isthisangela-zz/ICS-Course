@@ -13,3 +13,5 @@ def recursive_shuffle unshuffled_array, shuffled_array
     return recursive_shuffle unshuffled_array, shuffled_array
   end
 end
+
+puts(shuffle([1,2,3,4,5,6,7,8,9]))
