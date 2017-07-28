@@ -12,3 +12,5 @@ def recursive_sort unsorted_array, sorted_array
     return recursive_sort unsorted_array, sorted_array
   end
 end
+
+puts(sort(['can','feel','singing','like','a','can']))
